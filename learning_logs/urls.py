@@ -2,7 +2,7 @@
 
 from django.conf.urls import url
 
-from .views import index, topics, topic
+from .views import index, topics, topic, new_topic
 
 urlpatterns = [
     #Home page
@@ -13,4 +13,7 @@ urlpatterns = [
 
     #show all topics
     url(r'^topics/(?P<topic_id>\d+)/$', topic, name='topic'),
+
+    #page for adding a new topic
+    url(r'^new_topics/$', new_topic, name='new_topic')
 ]
