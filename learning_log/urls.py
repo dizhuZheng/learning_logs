@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import urls as users_url
 from learning_logs import urls as learning_logs_url
 
 urlpatterns = [
     path('', include((learning_logs_url,'learning_logs'), namespace='learning_logs')),
+    path('', include((users_url,'users'), namespace='users')),
     path('admin/', admin.site.urls),
 ]
