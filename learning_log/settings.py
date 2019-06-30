@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'y)-jf1q*mlgb!_cc4=q7d4n7^m(3e+^9rmbp5m7v6!$7#alv5='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['dizhu-log.herokuapp.com']
 
 
 # Application definition
