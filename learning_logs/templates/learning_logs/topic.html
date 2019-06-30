@@ -3,7 +3,14 @@
 {% block content %}
 
   <p>Topic: {{ topic }}</p>
-
+  <p>
+    <a href="{% url 'learning_logs:edit_topic' topic.id %}">edit topic</a>
+    <form action="{% url 'learning_logs:edit_topic' topic.id %}" method='post'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name='submit'>submit</button>
+    </form>
+  </p>
   <p>Entires:</p>
   <p>
     <a href="{% url 'learning_logs:new_entry' topic.id %}">add new entry</a>
